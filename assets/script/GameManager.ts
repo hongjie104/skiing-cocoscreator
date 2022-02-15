@@ -1,5 +1,8 @@
 
 import { _decorator, Component, Camera, UITransform, screen, TiledUserNodeData, Game } from 'cc';
+import { Closestool2 } from './Closestool2';
+import { Closestool3 } from './Closestool3';
+import { Closestool4 } from './Closestool4';
 import { GameEvent } from './GameEvent';
 import { Player } from './Player';
 const { ccclass, property } = _decorator;
@@ -11,6 +14,15 @@ export class GameManager extends Component {
 
     @property({ type: Player, visible: true })
     _player: Player;
+
+    @property({ type: Closestool2, visible: true })
+    _closestool2: Closestool2;
+
+    @property({ type: Closestool3, visible: true })
+    _closestool3: Closestool3;
+
+    @property({ type: Closestool4, visible: true })
+    _closestool4: Closestool4;
 
     private _cameraMinX = 0;
     private _cameraMaxX = 0;
@@ -47,6 +59,16 @@ export class GameManager extends Component {
                 }
                 this._camera.node.setPosition(cameraX, 0);
             }
+            const { x } = this._player.node.position;
+            if (x > -1288) {
+                this._closestool2.playAnimation();
+                if (x > 770) {
+                    this._closestool3.playAnimation();
+                    if (x > 2330) {
+                        this._closestool4.playAnimation();
+                    }
+                }
+            }
         }
     }
 
@@ -54,5 +76,8 @@ export class GameManager extends Component {
         this.isStarted = true;
         this._camera.node.setPosition(this._cameraMaxX, 0);
         this._player.node.setPosition(-3970, 94);
+        this._closestool2.reset();
+        this._closestool3.reset();
+        this._closestool4.reset();
     }
 }

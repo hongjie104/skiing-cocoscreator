@@ -1,5 +1,7 @@
 {
   "splash-setting": {
-    "displayWatermark": false
+    "displayWatermark": false,
+    "url": "/Users/zhouhongjie/Desktop/cocosCreatorLogo.png",
+    "totalTime": 100
   }
 }

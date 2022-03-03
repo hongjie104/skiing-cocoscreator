@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Camera, UITransform, screen, TiledUserNodeData, Game } from 'cc';
+import { _decorator, Component, Camera, UITransform, screen, Node } from 'cc';
 import { Closestool2 } from './Closestool2';
 import { Closestool3 } from './Closestool3';
 import { Closestool4 } from './Closestool4';
@@ -24,6 +24,9 @@ export class GameManager extends Component {
     @property({ type: Closestool4, visible: true })
     _closestool4: Closestool4;
 
+    @property({ type: Node, visible: true })
+    _snow: Node;
+
     private _cameraMinX = 0;
     private _cameraMaxX = 0;
 
@@ -32,9 +35,7 @@ export class GameManager extends Component {
     set isStarted(val: boolean) {
         this._isStarted = val;
         this._player.isStarted = val;
-        if (!val) {
-            GameEvent.instance.emit(GameEvent.END_GAME);
-        }
+        GameEvent.instance.emit(val ? GameEvent.START_GAME: GameEvent.END_GAME);
     }
 
     onLoad() {
@@ -44,12 +45,13 @@ export class GameManager extends Component {
         this._cameraMinX = ((contentSize.height * windowSize.width / windowSize.height) >> 1) - (contentSize.width >> 1);
         this._cameraMaxX = -this._cameraMinX;
         this._camera.node.setPosition(this._cameraMinX, 0);
+        this._snow.setPosition(this._cameraMinX, 0);
     }
 
     update(dt: number): void {
         if (this._isStarted) {
             let cameraX = this._player.node.position.x;
-            if (cameraX > 3864) {
+            if (cameraX > 10290) {
                 this.isStarted = false;
             } else {
                 if (cameraX < this._cameraMinX) {
@@ -58,13 +60,14 @@ export class GameManager extends Component {
                     cameraX = this._cameraMaxX;
                 }
                 this._camera.node.setPosition(cameraX, 0);
+                this._snow.setPosition(cameraX, 0);
             }
             const { x } = this._player.node.position;
-            if (x > -1288) {
+            if (x > -3000) {
                 this._closestool2.playAnimation();
-                if (x > 770) {
+                if (x > 1850) {
                     this._closestool3.playAnimation();
-                    if (x > 2330) {
+                    if (x > 5703) {
                         this._closestool4.playAnimation();
                     }
                 }
@@ -75,7 +78,8 @@ export class GameManager extends Component {
     startGame(): void {
         this.isStarted = true;
         this._camera.node.setPosition(this._cameraMaxX, 0);
-        this._player.node.setPosition(-3970, 94);
+        this._snow.setPosition(this._cameraMaxX, 0);
+        this._player.node.setPosition(-10255, 111);
         this._closestool2.reset();
         this._closestool3.reset();
         this._closestool4.reset();

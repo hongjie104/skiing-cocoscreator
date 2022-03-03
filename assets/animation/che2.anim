@@ -8,7 +8,7 @@
     "speed": 0.1,
     "wrapMode": 22,
     "enableTrsBlending": false,
-    "_duration": 1.7666666666666666,
+    "_duration": 3.2333333333333334,
     "_hash": 500763545,
     "_tracks": [
       {
@@ -59,15 +59,16 @@
     "_times": [
       0,
       0.5,
-      1.4666666666666666,
-      1.7666666666666666
+      1.4666666984558105,
+      2.6666667461395264,
+      3.2333333492279053
     ],
     "_values": [
       {
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": -3912.074,
+        "value": -8673.8212890625,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -78,7 +79,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": -3912.074,
+        "value": -8981.859375,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -89,7 +90,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": -2992.207,
+        "value": -9987.2265625,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -100,7 +101,18 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": -2735.873,
+        "value": -8976.04296875,
+        "rightTangent": 0,
+        "rightTangentWeight": 1,
+        "leftTangent": 0,
+        "leftTangentWeight": 1,
+        "easingMethod": 0
+      },
+      {
+        "__type__": "cc.RealKeyframeValue",
+        "interpolationMode": 0,
+        "tangentWeightMode": 0,
+        "value": -8655.2666015625,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -122,15 +134,16 @@
     "_times": [
       0,
       0.5,
-      1.4666666666666666,
-      1.7666666666666666
+      1.4666666984558105,
+      2.6666667461395264,
+      3.2333333492279053
     ],
     "_values": [
       {
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": 560.568,
+        "value": 265.364990234375,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -141,7 +154,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": 560.568,
+        "value": 419.3840026855469,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -152,7 +165,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": 331.881,
+        "value": 652.7529907226562,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -163,7 +176,18 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": 196.631,
+        "value": 408.3190002441406,
+        "rightTangent": 0,
+        "rightTangentWeight": 1,
+        "leftTangent": 0,
+        "leftTangentWeight": 1,
+        "easingMethod": 0
+      },
+      {
+        "__type__": "cc.RealKeyframeValue",
+        "interpolationMode": 0,
+        "tangentWeightMode": 0,
+        "value": 254.45700073242188,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -185,10 +209,22 @@
     "_times": [
       0,
       0.5,
-      1.4666666666666666,
-      1.7666666666666666
+      1.4666666984558105,
+      2.6666667461395264,
+      3.2333333492279053
     ],
     "_values": [
+      {
+        "__type__": "cc.RealKeyframeValue",
+        "interpolationMode": 0,
+        "tangentWeightMode": 0,
+        "value": 0,
+        "rightTangent": 0,
+        "rightTangentWeight": 1,
+        "leftTangent": 0,
+        "leftTangentWeight": 1,
+        "easingMethod": 0
+      },
       {
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,

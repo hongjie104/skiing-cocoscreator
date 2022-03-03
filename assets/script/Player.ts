@@ -76,48 +76,36 @@ export class Player extends Component {
 
     update(dt: number): void {
         if (this._isStarted) {
-            // if (this._isHitting) {
-                // console.log(this._body.linearVelocity);
-            this._linearVelocity.x = this._body.linearVelocity.x + 0.16; // randomNum(16, 20) / 100;
-            // this._linearVelocity.x = 3; // randomNum(16, 20) / 100;
-            // console.log(this._linearVelocity.x);
+            this._linearVelocity.x = this._body.linearVelocity.x + 0.18; // randomNum(16, 20) / 100;
             this._body.linearVelocity = this._linearVelocity;
-            // }
-            // let { rotation: { z, w } } = this._body.node;
-            // if (z > 0.15) {
-            //     this._body.angularVelocity = 2;
-            // } else if (z < -0.15) {
-            //     this._body.angularVelocity = -2;
-            // }
-            // if (z < -0.1) z = -0.1;
-            // // if (z > 0.1) z=0.1;
-            // // if (z < -0.1) {
-            // this._body.node.setRotation(0, 0, z, w);
-            // // }
             console.log(this.node.position);
             const { x, y } = this.node.position;
-            if (x > -2780 && x < -2750 && y > 56) {
+            // if (x > -5890 && y > 155) {
+            //     this.node.getComponent(RigidBody2D).fixedRotation = true;
+            // } else if (x > -5240 && y < 175) {
+            //     this.node.getComponent(RigidBody2D).fixedRotation = false;
+            // }
+            if (x > -5960 && x < -5600 && y > 160) {
                 if (!this._isPlayingRun) {
                     this._animation.play("playerGun");
                     this._isPlayingRun = true;
                 }
-            } else if (x > -650 && x < 630 && y > 168) {
+            } else if (x > -1980 && x < -1900 && y > 270) {
                 if (!this._isPlayingRun) {
                     this._animation.play("playerGun");
                     this._isPlayingRun = true;
                 }
-            } else if (x > 1254 && x < 1270 && y > 213) {
+            } else if (x > 2660 && x < 2680 && y > 208) {
                 if (!this._isPlayingRun) {
                     this._animation.play("playerGun");
                     this._isPlayingRun = true;
                 }
-            } else if (x > 2715 && x < 2720 && y > 219) {
+            } else if (x > 6600 && x < 7000 && y > 220) {
                 if (!this._isPlayingRun) {
                     this._animation.play("playerGun");
                     this._isPlayingRun = true;
                 }
             }
-
         }
     }
 

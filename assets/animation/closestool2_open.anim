@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.AnimationClip",
-    "_name": "closestool2",
+    "_name": "closestool2_open",
     "_objFlags": 0,
     "_native": "",
     "sample": 60,
@@ -143,7 +143,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": -10,
+        "value": -25,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
